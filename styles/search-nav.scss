@@ -1,0 +1,48 @@
+@import './global.scss';
+
+nav {
+	position: fixed;
+	display: flex;
+	align-items: center;
+	top: 0;
+	right: 0;
+	padding: 0.6rem 0;
+	// height: 4rem;
+	width: fit-content;
+	border-radius: 0 0 0 1em;
+	background: var(--bg2);
+	transition: $transition;
+	box-shadow: $shadow;
+	#logo {
+		margin: 0 0 0 1.25rem;
+	}
+	li {
+		cursor: pointer;
+		display: inline-block;
+		margin: 0 0.5rem;
+		padding: 0.5rem 0.75rem;
+		border-radius: 0.8em;
+		vertical-align: middle;
+		transition: $transition;
+		&:hover,
+		&:active,
+		&.active {
+			background: var(--accent);
+		}
+	}
+	svg {
+		width: 1em;
+		height: 1em;
+		vertical-align: text-top;
+	}
+	#search-bar {
+		display: inline-block;
+		transition: $transition;
+		overflow: hidden;
+		border-radius: 1em;
+		padding: 0 0.5rem;
+		input {
+			margin: auto initial;
+		}
+	}
+}

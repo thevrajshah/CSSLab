@@ -1,0 +1,75 @@
+$transition: 0.3s ease-in-out;
+$shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.05);
+
+@media (prefers-color-scheme: dark,) {
+	* {
+		--bg1: hsl(0, 0%, 14%);
+		--bg2: hsl(0, 0%, 28%);
+		--txt1: hsl(0, 0%, 98%);
+		--txt2: hsl(0, 0%, 92%);
+		--accent: hsl(150, 100%, 36%);
+	}
+}
+@media (prefers-color-scheme: light) {
+	* {
+		--bg1: hsl(0, 0%, 98%);
+		--bg2: hsl(0, 0%, 88%);
+		--txt1: hsl(0, 0%, 12%);
+		--txt2: hsl(0, 0%, 18%);
+		--accent: hsl(46, 100%, 66%);
+	}
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+	text-rendering: optimizeLegibility;
+	scroll-behavior: smooth;
+	// transition: $transition;
+}
+
+html {
+	font-size: 14px;
+	font-family: 'Fira Sans', sans-serif;
+	letter-spacing: 0.04em;
+}
+
+body {
+	background: var(--bg1);
+	color: var(--txt1);
+}
+ul li {
+	list-style: none;
+}
+
+.container {
+	max-width: 1366px;
+	margin: 0 auto;
+	padding: 0 25px;
+}
+input[type='text'],
+input[type='search'] {
+	padding: 0.75em;
+	background: var(--bg1);
+	font-weight: 500;
+	color: var(--txt2);
+	border-radius: 1em;
+	&:focus {
+		outline: none;
+	}
+}
+
+// MEDIUM Screen-Size
+@media only screen and (max-width: 860px) {
+	.container {
+		padding: 0 20px;
+	}
+}
+// SMALL Screen-Size
+@media only screen and (max-width: 600px) {
+	.container {
+		padding: 0 10px;
+	}
+}

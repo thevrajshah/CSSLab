@@ -1,0 +1,36 @@
+<html>
+<link rel="stylesheet" href="/styles/search-nav.css">
+
+<body>
+	<nav>
+		<ul>
+			<span id="logo">
+				Learn<b style=" color: var(--accent) ">ALONG</b>
+			</span>
+			<li>
+				<FaPlus />
+				&nbsp;New Session
+			</li>
+			<li className={search ? 'active' : null} onClick={()=> (search ? getSearch() : setSearch(1))}
+				>
+				<label for="search-btn"><input type="checkbox" id="search-btn"></label>
+			</li>
+		</ul>
+		<div id="search-bar" style="
+					width: search ? '10em' : 0,
+				">
+			{search ? (
+			<input autoFocus type="search" style="width: 9.5em" onKeyDown='keyDown()' />
+			) : null}
+		</div>
+	</nav>
+</body>
+<script src="https://kit.fontawesome.com/123f0f79ae.js" crossorigin="anonymous"></script>
+<script>
+	keyDown: ({ code, target }) => {
+		if (code == 'Escape') setSearch(0);
+		if (code == 'Enter' || 'NumpadEnter') console.log(target.value);
+	}
+</script>
+
+</html>

@@ -1,0 +1,137 @@
+@media (prefers-color-scheme: dark) {
+  * {
+    --bg1: hsl(0, 0%, 14%);
+    --bg2: hsl(0, 0%, 28%);
+    --txt1: hsl(0, 0%, 98%);
+    --txt2: hsl(0, 0%, 92%);
+    --accent: hsl(150, 100%, 36%);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  * {
+    --bg1: hsl(0, 0%, 98%);
+    --bg2: hsl(0, 0%, 88%);
+    --txt1: hsl(0, 0%, 12%);
+    --txt2: hsl(0, 0%, 18%);
+    --accent: hsl(46, 100%, 66%);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 14px;
+  font-family: 'Fira Sans', sans-serif;
+  letter-spacing: 0.04em;
+}
+
+body {
+  background: var(--bg1);
+  color: var(--txt1);
+}
+
+ul li {
+  list-style: none;
+}
+
+.container {
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 0 25px;
+}
+
+input[type='text'],
+input[type='search'] {
+  padding: 0.75em;
+  background: var(--bg1);
+  font-weight: 500;
+  color: var(--txt2);
+  border-radius: 1em;
+}
+
+input[type='text']:focus,
+input[type='search']:focus {
+  outline: none;
+}
+
+@media only screen and (max-width: 860px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    padding: 0 10px;
+  }
+}
+
+nav {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 0;
+  right: 0;
+  padding: 0.6rem 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 0 0 0 1em;
+  background: var(--bg2);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  -webkit-box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.05);
+          box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.05);
+}
+
+nav #logo {
+  margin: 0 0 0 1.25rem;
+}
+
+nav li {
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.8em;
+  vertical-align: middle;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+nav li:hover, nav li:active, nav li.active {
+  background: var(--accent);
+}
+
+nav svg {
+  width: 1em;
+  height: 1em;
+  vertical-align: text-top;
+}
+
+nav #search-bar {
+  display: inline-block;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  overflow: hidden;
+  border-radius: 1em;
+  padding: 0 0.5rem;
+}
+
+nav #search-bar input {
+  margin: auto initial;
+}
+/*# sourceMappingURL=search-nav.css.map */
